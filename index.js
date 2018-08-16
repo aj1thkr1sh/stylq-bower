@@ -74,6 +74,6 @@ exports.process = function(fileName){
   }
   fs.writeFile(saveFileName+'.html','<!doctype html>\n'+lines,(err)=>{
     if(err) throw err;
-    console.log('Stylq  : '+fileName+' Exported to '+saveFileName+'.html');
+    console.log('\nStylq  : '+fileName+' Exported to '+saveFileName+'.html');
   });
 }

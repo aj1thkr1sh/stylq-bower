@@ -1,7 +1,7 @@
 # Stlyq
-Stylq is the cool syntaxed HTML Preprocessor.
+Stylq is the cool syntax HTML Preprocessor.
 Stylq will allow user to make HTML file more easily.
-Stlyq is the Rich Syntaxed file to generator HTML file in the easy way.  Stylq is the easy readable and writable.
+Stlyq is the Rich Syntax file to generator HTML file in the easy way.  Stylq is the easy readable and writable.
 
 ## Command Line Usage
 
@@ -31,8 +31,11 @@ Stlyq is the Rich Syntaxed file to generator HTML file in the easy way.  Stylq i
       h1{
         This is header
       }
-      p{
+      p id="paragraph-id"{
         This is paragraph
+      }
+      h2 style="color: blue;" id="heading-line"{
+        The Multi attributes
       }
     }
   }
@@ -42,25 +45,28 @@ Stlyq is the Rich Syntaxed file to generator HTML file in the easy way.  Stylq i
 
   ```
   //sample.html
-<!doctype html>
-<html>
-  <head>
-    <title>
-      The Title of the Page
-    </title>
-  </head>
-  <body>
-    <h1>
-      This is header
-    </h1>
-    <p>
-      This is paragraph
-    </p>
-  </body>
-</html>
+  <!doctype html>
+  <html>
+    <head>
+      <title>
+        The Title of the Page
+      </title>
+    </head>
+    <body>
+      <h1>
+        This is header
+      </h1>
+      <p id="paragraph-id">
+        This is paragraph
+      </p>
+      <h2 style="color: blue;" id="heading-line">
+        The Multi attributes
+      </h2>
+    </body>
+  </html>
   ```
 
-  Ouput on the console
+  Output on the console
 
   ```
   Stylq  : sample.stylq Exported to sample.html
