@@ -4,11 +4,24 @@ Stylq will allow user to make HTML file more easily.
 Stlyq is the Rich Syntax file to generator HTML file in the easy way.  Stylq is the easy readable and writable.
 
 ## Command Line Usage
-
+For NPM
 ```
   npm i stylq
 ```
+For YARN
+```
+  yarn add stylq
+```
+## General Syntax
 
+  Every Tag name should only defined in blocks.
+  1. Only at the end of Tag Name the curly braces should be placed.
+  2. The Order should be exactly as same as below and nested tags can be used.
+```
+ tagName{
+   <!-- Any Content -->
+ }
+```
 ## Usage and Example
 
 ```
