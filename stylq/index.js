@@ -129,6 +129,29 @@ exports.processAndSend = function(fileName,targetName){
   var endIndex = 0;
   for(var t=0;t<n;++t){
     for(var i=t;i<n;++i){
+      if(lines[i].trim().startsWith("link") || lines[i].trim().startsWith("br")
+          || lines[i].trim().startsWith("area") || lines[i].trim().startsWith("base")
+          || lines[i].trim().startsWith("command") || lines[i].trim().startsWith("hr")
+          || lines[i].trim().startsWith("embed") || lines[i].trim().startsWith("input")
+          || lines[i].trim().startsWith("keygen") || lines[i].trim().startsWith("menuitem")
+          || lines[i].trim().startsWith("meta") || lines[i].trim().startsWith("param")
+          || lines[i].trim().startsWith("source") || lines[i].trim().startsWith("track")
+          || lines[i].trim().startsWith("wbr")
+        ){
+        var tLines = "";
+        var tFullLine = lines[i];
+        tFullLine = tFullLine.replace('{','');
+        tFullLine = tFullLine.replace('}','');
+        var a = 0;
+        var aN = tFullLine.length;
+        while(tFullLine[a]===' '){
+          tLines += ' ';
+          a++;
+        }
+        tLines += '<';
+        tLines += tFullLine.trim();
+        lines[i] = tLines+' />';
+      }
       if(lines[i].endsWith('{')){
         if(first === false){
           startIndex = i;
