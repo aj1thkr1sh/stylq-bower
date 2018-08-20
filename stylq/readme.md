@@ -22,6 +22,20 @@ For YARN
    <!-- Any Content -->
  }
 ```
+## Note  : While using Atomic or Void Tag Use either two syntax below
+  Ending with Opening and Closing Curly Braces
+```
+  br{}
+
+  link rel="stylesheet" type="text/css" href="dir/stylesheet.css"{}
+```
+  OR
+  Ending without any Curly Braces
+```
+  br
+
+  link rel="stylesheet" type="text/css" href="dir/stylesheet.css"
+```
 ## Usage and Example
 
 ```
@@ -29,6 +43,10 @@ For YARN
 
   stylq.process('sample.stylq');
 
+```
+To Send to another location
+```
+  stylq.processAndSend('sample.stylq','targetFileName.html');
 ```
   Here is the sample file that is given as input.
 ```
@@ -85,7 +103,8 @@ For YARN
   Stylq  : sample.stylq Exported to sample.html
   ```
 
-  Comment is as same as HTML Comment.
+  Comment is like mentioned below.
+  Only Multiline Comment is allowed.
   Example
   ```
   //sample.stylq
@@ -97,12 +116,11 @@ For YARN
        }
      }
      body{
-       <!-- The Heading -->
        h1{
          This is header
        }
        <!--
-        A long Comment
+        The Comment
         is here.
         -->
        p{
