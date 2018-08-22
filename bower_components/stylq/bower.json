@@ -1,0 +1,21 @@
+{
+  "name": "stylq",
+  "main": "index.js",
+  "authors": [
+    "aj1thkr1sh <mailingtoajith@gmail.com>"
+  ],
+  "description": "Stylq is the cool syntaxed HTML Preprocessor",
+  "keywords": [
+    "Stylq",
+    "Proprocessor"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
