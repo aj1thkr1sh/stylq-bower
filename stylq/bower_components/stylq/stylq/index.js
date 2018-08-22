@@ -3,13 +3,12 @@
 exports.process = function(fileName){
   var fs = require('fs');
   var content = fs.readFileSync(fileName,'utf-8');
-  var fileNEn = fileName.lastIndexOf('.');
-  var saveFileName = fileName.substring(fileNEn,fileName.length);
-  saveFileExtension = '.html';
-  if(!saveFileName.includes('stylq')){
+  var fileNE = fileName.split('.');
+  var saveFileName = fileNE[0];
+  var saveFileExtension = fileNE[1];
+  if(saveFileExtension !== 'stylq'){
     return;
   }
-  saveFileName = fileName.substring(0,fileName.lastIndexOf('.'));
   var lines = content.split('\n');
   //console.log(lines);
   var n = lines.length;
@@ -111,7 +110,7 @@ exports.processAndSend = function(fileName,targetName){
   var fileNE = fileName.split('.');
   var saveFileName = fileNE[0];
   var saveFileExtension = fileNE[1];
-  if(!fileName.includes('stylq')){
+  if(saveFileExtension !== 'stylq'){
     return;
   }
   var lines = content.split('\n');
