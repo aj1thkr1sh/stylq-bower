@@ -48,7 +48,7 @@ To Send to another location
 ```
   stylq.processAndSend('sample.stylq','targetFileName.html');
 ```
-  Here is the sample file that is given as input.
+  Here is the sample file that is given as input. 
 ```
  //sample.stylq
 
