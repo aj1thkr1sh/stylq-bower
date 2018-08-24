@@ -3,6 +3,8 @@ Stylq is the cool syntax HTML Preprocessor.
 Stylq will allow user to make HTML file more easily.
 Stlyq is the Rich Syntax file to generator HTML file in the easy way.  Stylq is the easy readable and writable.
 
+## Stylq also allows to use variable to reuse the tokens.
+
 ## Command Line Usage
 For NPM
 ```
@@ -48,7 +50,7 @@ To Send to another location
 ```
   stylq.processAndSend('sample.stylq','targetFileName.html');
 ```
-  Here is the sample file that is given as input. 
+  Here is the sample file that is given as input.
 ```
  //sample.stylq
 
@@ -101,6 +103,76 @@ To Send to another location
 
   ```
   Stylq  : sample.stylq Exported to sample.html
+  ```
+
+  ## Using Variables
+  User assign block to declare and assign vairables
+
+  ## Syntax
+  ```
+  assign{
+    variableName =  VariableValue;
+  }
+  ```
+  OR
+  ```
+  assign{
+    variableName =  VariableValue
+  }
+  ```
+  ## Example
+  ```
+  assign{
+    maxWidth = 100%
+    skyBlue =  #1ed7f5;
+    widthSize = 150px;
+    div-textSize = 12px
+  }
+  html{
+    head{
+      title{
+        The Page
+      }
+      link rel="stylesheet" type="text/css" href="sheet.css"
+    }
+    body{
+      h1 style="color: [[skyBlue]]; width: [[maxWidth]];"{
+        The website
+      }
+      p{
+        The Paragrah is used
+      }
+      div style="width: [[widthSize]]; font-size: [[div-textSize]]"{
+        the widthSize is used
+      }
+    }
+  }
+
+  ```
+
+  Output
+
+  ```
+  <!doctype html>
+  <html>
+    <head>
+      <title>
+        The Page
+      </title>
+      <link rel="stylesheet" type="text/css" href="sheet.css" />
+    </head>
+    <body>
+      <h1 style="color: #1ed7f5; width: 100%;">
+        The website
+      </h1>
+      <p>
+        The Paragrah is used
+      </p>
+      <div style="width: 150px; font-size: 12px">
+        the widthSize is used
+      </div>
+    </body>
+  </html>
   ```
 
   Comment is like mentioned below.
