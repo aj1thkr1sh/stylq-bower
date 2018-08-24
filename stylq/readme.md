@@ -106,7 +106,7 @@ To Send to another location
   ```
 
   ## Using Variables
-  User assign block to declare and assign vairables
+  Use assign block to declare and assign vairables
 
   ## Syntax
   ```
