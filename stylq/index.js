@@ -44,6 +44,10 @@ exports.process = function(fileName){
       continue;
     }
     for(var i=t;i<n;++i){
+      if(lines[i].includes('[[') && lines[i].includes(']]')){
+          //console.log(lines[i]+' is used');
+          lines[i]=assignProcess(lines[i],map);
+      }
       if(lines[i].trim().startsWith("link") || lines[i].trim().startsWith("br")
           || lines[i].trim().startsWith("area") || lines[i].trim().startsWith("base")
           || lines[i].trim().startsWith("command") || lines[i].trim().startsWith("hr")
@@ -174,6 +178,10 @@ exports.processAndSend = function(fileName,targetName){
       continue;
     }
     for(var i=t;i<n;++i){
+      if(lines[i].includes('[[') && lines[i].includes(']]')){
+          //console.log(lines[i]+' is used');
+          lines[i]=assignProcess(lines[i],map);
+      }
       if(lines[i].trim().startsWith("link") || lines[i].trim().startsWith("br")
           || lines[i].trim().startsWith("area") || lines[i].trim().startsWith("base")
           || lines[i].trim().startsWith("command") || lines[i].trim().startsWith("hr")
