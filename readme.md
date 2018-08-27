@@ -105,10 +105,10 @@ To Send to another location
   Stylq  : sample.stylq Exported to sample.html
   ```
 
-  ## Using Variables
+## Using Variables
   Use assign block to declare and assign vairables
 
-  ## Syntax
+## Syntax
   ```
   assign{
     variableName =  VariableValue;
@@ -120,7 +120,7 @@ To Send to another location
     variableName =  VariableValue
   }
   ```
-  ## Example
+## Example
   ```
   assign{
     maxWidth = 100%

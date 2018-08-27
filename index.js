@@ -6,7 +6,7 @@ exports.process = function(fileName){
   var fileNEn = fileName.lastIndexOf('.');
   var saveFileName = fileName.substring(fileNEn,fileName.length);
   saveFileExtension = '.html';
-  if(!saveFileName.includes('stylq')){
+  if(!saveFileName.endsWith('.stylq')){
     return;
   }
   saveFileName = fileName.substring(0,fileName.lastIndexOf('.'));
@@ -141,7 +141,7 @@ exports.processAndSend = function(fileName,targetName){
   var fileNE = fileName.split('.');
   var saveFileName = fileNE[0];
   var saveFileExtension = fileNE[1];
-  if(!fileName.includes('stylq')){
+  if(!fileName.endsWith('.stylq')){
     return;
   }
   var lines = content.split('\n');
